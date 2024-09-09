@@ -1,1 +1,8 @@
-<h1>Index</h1>
+<% @birds.each do |bird|%>
+  <div class="card-container">
+    <%= image_tag "birds/house_sparrow.png", class:"card-img"%>
+    <div class="card-content">
+      <%= link_to bird.name, bird, class:"aboreto no-deco text-black text-center" %>
+    </div>
+  </div>
+<% end %>

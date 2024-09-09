@@ -86,7 +86,7 @@ menu{
   width: 40%;
   margin: 0 auto;
   padding: 12px 8px;
-  border-radius: 18px;
+  border-radius: 12px;
 }
 
 .cta-img{
@@ -115,4 +115,17 @@ menu{
 .nav-link{
   text-decoration: none;
   color: #D9A86C;
+}
+
+.card-container{
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  padding: 16px;
 }

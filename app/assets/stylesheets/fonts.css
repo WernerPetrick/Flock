@@ -44,6 +44,10 @@
   text-decoration: underline;
 }
 
+.no-deco{
+  text-decoration: none;
+}
+
 .text-center{
   text-align: center;
 }
