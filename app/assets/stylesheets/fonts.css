@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Caveat:wght@400..700&family=Fresca&display=swap');
+
+.aboreto {
+  font-family: "Aboreto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caveat {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fresca {
+  font-family: "Fresca", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-shadow{
+  text-shadow: 2px 2px 4px #0F1318;
+}
+
+.f-95{
+  font-size: 9.5em;
+}
+
+.f-35{
+  font-size: 3.5em;
+}
+
+.f-25{
+  font-size: 2.5em;
+}
+
+
+.f-15{
+  font-size: 1.5em;
+}
+
+.underline:hover{
+  text-decoration: underline;
+}
+
+.text-center{
+  text-align: center;
+}
