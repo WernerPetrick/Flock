@@ -1,7 +1,17 @@
-<h1>Show</h1>
-
-<%= image_tag "birds/house_sparrow.png", class:"card-img"%>
-<%= @bird.name%>
-<%= @bird.status%>
-<%= @bird.habitat%>
-<%= @bird.description%>
+<div class="flex flex-column centered">
+  <div class="">
+    <%= image_tag "birds/house_sparrow.png", class:"display-img"%>
+  </div>
+  <div class="bird-title f-25 aboreto">
+    <%= @bird.name%>
+  </div>
+  <div class="stats">
+    <p><b>Size: </b> 14cm</p>
+    <p><b>Status: </b> <%= @bird.status%></p>
+    <p><b>Habitat: </b> <%= @bird.habitat%></p>
+    <p><b>Breeding Season: </b> Jan-Dec</p>
+  </div>
+  <div class="bird-description f-15">
+    <p><%= @bird.description%></p>
+  </div>
+</div>
