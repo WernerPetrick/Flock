@@ -1,7 +1,7 @@
 databases:
   - name: Flock
     databaseName: flock_production
-    user: Flock
+    user: flock
     plan: free
 
 services:
