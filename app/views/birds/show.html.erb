@@ -1,11 +1,12 @@
+<div class="bg-purple full-height">
 <div class="flex flex-column centered">
   <div class="">
     <%= image_tag "birds/house_sparrow.png", class:"display-img"%>
   </div>
-  <div class="bird-title f-25 aboreto">
+  <div class="bird-title f-25 aboreto text-white">
     <%= @bird.name%>
   </div>
-  <div class="stats">
+  <div class="stats bg-sand">
     <p><b>Size: </b> 14cm</p>
     <p><b>Status: </b> <%= @bird.status%></p>
     <p><b>Habitat: </b> <%= @bird.habitat%></p>
@@ -14,4 +15,13 @@
   <div class="bird-description f-15">
     <p><%= @bird.description%></p>
   </div>
+</div>
+
+<%= link_to previous_bird_path(@bird), class: "previous-button" do %>
+  <%= image_tag "feather-arrow-left.png", alt: "Previous Bird", class: "svg-icon" %>
+<% end %>
+
+<%= link_to next_bird_path(@bird), class: "next-button" do %>
+  <%= image_tag "feather-arrow-right.png", alt: "Next Bird", class: "svg-icon" %>
+<% end %>
 </div>

@@ -36,4 +36,14 @@ class BirdsController < ApplicationController
     end
   end
 
+  def next
+    @bird = Bird.where("id > ?", params[:id]).first || Bird.first
+    redirect_to bird_path(@bird)
+  end
+
+  def previous
+    @bird = Bird.where("id < ?", params[:id]).last || Bird.last
+    redirect_to bird_path(@bird)
+  end
+
 end

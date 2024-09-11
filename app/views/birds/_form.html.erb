@@ -1,0 +1,51 @@
+<div class="form king card">
+<%= form_with model: @bird do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% bird.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :size %><br>
+    <%= form.text_field :size %>
+    <% bird.errors.full_messages_for(:size).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+     <%= form.label :habitat %>
+     <br>
+    <%= form.select :habitat, ['Fynbos', 'Forest', 'Savanna', 'Karoo', 'Grassland', 'Ocean', 'Lakes & Estuaries'] %>
+    <% bird.errors.full_messages_for(:habitat).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+     <%= form.label :status %>
+     <br>
+    <%= form.select :status, ['Common', 'Uncommon', 'Scarce', 'Vulnerable'] %>
+    <% bird.errors.full_messages_for(:status).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+  <%= form.label :Upload_File, for:"img" %>
+  <%= form.file_field :image, class:"hidden", id:"img" %><br>
+  <% bird.errors.full_messages_for(:image).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+  </div>
+  <br>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+</div>

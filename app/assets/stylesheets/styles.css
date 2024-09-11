@@ -150,3 +150,31 @@ menu{
   margin-top: 25px;
   width: 700px;
 }
+
+.previous-button, .next-button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.previous-button {
+  left: 20px; 
+}
+
+.next-button {
+  right: 20px;
+}
+
+.svg-icon {
+  width: 75px;
+  height: 75px;
+}
+
+.previous-button:hover .svg-icon,
+.next-button:hover .svg-icon {
+  opacity: 0.8; /* Add hover effect */
+}
+
+.full-height{
+  height: 100vh;
+}

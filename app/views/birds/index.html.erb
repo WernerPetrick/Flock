@@ -1,4 +1,5 @@
-<% @birds.each do |bird|%>
+<div class="flex centered">
+  <% @birds.each do |bird|%>
   <div class="card-container">
     <%= image_tag "birds/house_sparrow.png", class:"card-img"%>
     <div class="card-content">
@@ -6,3 +7,4 @@
     </div>
   </div>
 <% end %>
+</div>
