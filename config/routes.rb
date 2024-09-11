@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get 'about', to: 'pages#about'
-  get 'join', to: 'pages#join'
   get 'faq', to: 'pages#faq'
-  get 'contact', to: 'pages#contact'
+  get 'join', to: 'pages#join'
+  get 'login', to: 'pages#login'
 
   # Defines the root path route ("/")
   root "pages#landing"

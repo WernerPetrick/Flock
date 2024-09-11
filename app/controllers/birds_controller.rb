@@ -46,4 +46,10 @@ class BirdsController < ApplicationController
     redirect_to bird_path(@bird)
   end
 
+  private
+
+  def bird_params
+    params.require(:bird).permit(:title, :size, :habitat, :status, :image)
+  end
+
 end
