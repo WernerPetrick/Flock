@@ -29,7 +29,7 @@ class BirdsController < ApplicationController
   def update
     @bird = @bird = Bird.find(params[:id])
 
-    if @bird.update(article_params)
+    if @bird.update(bird_params)
       redirect_to @bird
     else
       render :edit, status: :unprocessable_entity
@@ -49,7 +49,7 @@ class BirdsController < ApplicationController
   private
 
   def bird_params
-    params.require(:bird).permit(:title, :size, :habitat, :status, :image)
+    params.require(:bird).permit(:name, :breeding_season, :size, :habitat, :status, :description, :image)
   end
 
 end

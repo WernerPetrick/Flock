@@ -1,0 +1,13 @@
+
+<div class="profile flex flex-column">
+  <div class="profile-img">
+    <%= raw @user.avatar_url %>
+  </div>
+  <div class="profile-details text-center">
+    <%= @user.email%>
+  </div>
+  <div class="controls margin-auto flex flex-column centered gap-10">
+    <%= button_to "Log out", destroy_user_session_path, method:  :delete%>
+    <%= link_to "Edit Profile", edit_user_registration_path, class:'link-btn no-deco' %>
+  </div>
+</div>

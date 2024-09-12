@@ -1,7 +1,7 @@
-<div class="flex centered">
+<div class="flex centered wrap">
   <% @birds.each do |bird|%>
   <div class="card-container">
-    <%= image_tag "birds/house_sparrow.png", class:"card-img"%>
+    <%= image_tag url_for(bird.image), class:"card-img"  if bird.image.attached? %>
     <div class="card-content">
       <%= link_to bird.name, bird, class:"aboreto no-deco text-black text-center" %>
     </div>

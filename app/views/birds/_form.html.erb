@@ -1,9 +1,17 @@
 <div class="form king card">
 <%= form_with model: @bird do |form| %>
   <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% bird.errors.full_messages_for(:title).each do |message| %>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% bird.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :breeding_season %><br>
+    <%= form.text_field :breeding_season %>
+    <% bird.errors.full_messages_for(:breeding_season).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
@@ -25,11 +33,21 @@
     <% end %>
   </div>
 
+  
+
   <div>
      <%= form.label :status %>
      <br>
     <%= form.select :status, ['Common', 'Uncommon', 'Scarce', 'Vulnerable'] %>
     <% bird.errors.full_messages_for(:status).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description, class:"w-500 h-250" %>
+    <% bird.errors.full_messages_for(:size).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>

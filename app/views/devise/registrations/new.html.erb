@@ -1,0 +1,34 @@
+<div class="bg-gray-blue">
+  <div class="flex flex-column centered full-height">
+   <div class="form-container">
+     <h2 class="text-center fresca">Sign up</h2>
+  <%= image_tag "swee-waxbill.png", class:"small-img mt-50 mb-25 margin-auto"%>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder:"password" %>
+    <% if @minimum_password_length %>
+    <br>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+  </div>
+  <br>
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "reconfirm password" %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Sign up", class:"" %>
+  </div>
+  <% end %>
+
+  </div>
+   </div>
+
+</div>
