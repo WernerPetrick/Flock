@@ -1,4 +1,4 @@
-<div class="flex centered wrap">
+<div class="flex items-center justify-center flex-wrap">
   <% @birds.each do |bird|%>
   <div class="card-container">
     <%= image_tag url_for(bird.image), class:"card-img"  if bird.image.attached? %>

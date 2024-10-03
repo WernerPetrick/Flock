@@ -1,7 +1,11 @@
 class User < ApplicationRecord
+
   before_create :assign_avatar
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :bird_sightings
+  has_many :seen_birds, through: :bird_sightings, source: :bird
 
  
   private

@@ -1,9 +1,14 @@
 <menu class="bg-gray-blue">
-  <ul class="flex space-around">
-    <li class="text-shadow underline no-list text-yellow f-15"><%=link_to "HOME", root_path, class:"nav-link" %></li>
-    <li class="text-shadow underline no-list text-yellow f-15"><%=link_to "ABOUT", about_path, class:"nav-link" %></li>
-    <li class="text-shadow underline no-list text-yellow f-15"><%=link_to "FAQ", faq_path, class:"nav-link"%></li>
-    <li class="text-shadow underline no-list text-yellow f-15"><%=link_to "JOIN", new_user_registration_path, class:"nav-link"%></li>
-    <li class="text-shadow underline no-list text-yellow f-15"><%=link_to "LOGIN", new_user_session_path, class:"nav-link" %></li>
+  <ul class="flex justify-around">
+    <li class="text-shadow underline list-none text-yellow f-15"><%=link_to "HOME", root_path, class:"nav-link" %></li>
+    <li class="text-shadow underline list-none text-yellow f-15"><%=link_to "ABOUT", about_path, class:"nav-link" %></li>
+    <li class="text-shadow underline list-none text-yellow f-15"><%=link_to "FAQ", faq_path, class:"nav-link"%></li>
+    <% if user_signed_in? %>
+      <li class="text-shadow underline list-none text-yellow f-15"><%=link_to "BROWSE BIRDS", birds_path, class:"nav-link"%></li>
+      <li class="text-shadow underline list-none text-yellow f-15"><%=link_to "PROFILE", profile_path, class:"nav-link"%></li>
+    <%else%>
+      <li class="text-shadow underline list-none text-yellow f-15"><%=link_to "JOIN", new_user_registration_path, class:"nav-link"%></li>
+      <li class="text-shadow underline list-none text-yellow f-15"><%=link_to "LOGIN", new_user_session_path, class:"nav-link" %></li>
+    <%end%>
   </ul>
 </menu>

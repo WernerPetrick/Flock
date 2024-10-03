@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_09_11_170826) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_14_165106) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_11_170826) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "bird_sightings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "bird_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bird_id"], name: "index_bird_sightings_on_bird_id"
+    t.index ["user_id"], name: "index_bird_sightings_on_user_id"
+  end
+
   create_table "birds", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -68,4 +77,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_11_170826) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bird_sightings", "birds"
+  add_foreign_key "bird_sightings", "users"
 end

@@ -1,0 +1,6 @@
+<h2>Birds you have seen:</h2>
+  <ul>
+    <% @user.seen_birds.each do |bird| %>
+      <li><%= bird.name %></li>
+    <% end %>
+  </ul>

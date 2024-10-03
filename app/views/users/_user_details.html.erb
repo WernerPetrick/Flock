@@ -1,0 +1,21 @@
+<div class="user-details ">
+  <div class="flex">
+    <div>
+                <div class="flex items-center">
+              <div class="pb-12 pt-12 pl-2">
+                <%= raw @user.avatar_url %>
+              </div>
+              <div class="mx-6">
+                <%= @user.email%>
+              </div>
+            </div>
+            <div class="flex flex-col max-w-sm items-center">
+              <%= link_to "Edit Profile", edit_user_registration_path, class:'link-btn no-deco' %>
+              <%= button_to "Log out", destroy_user_session_path, method:  :delete%>
+            </div>
+    </div>
+    <div>
+      <%= render 'bird-list' %>
+    </div>
+  </div>
+</div>
